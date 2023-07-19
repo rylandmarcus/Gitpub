@@ -9,8 +9,15 @@ app.get('/', (req, res)=>{
 
 app.get('/drinks', (req, res)=>{
     // res.send(drinks)
-    res.render('drinks_index.ejs', {
+    res.render('drinks/drinks_index.ejs', {
         drinks: drinks
+    })
+})
+
+app.get('/drinks/:id', (req, res)=>{
+    // res.send(req.params.id)
+    res.render('drinks/drinks_show.ejs', {
+        drink: drinks[req.params.id]
     })
 })
 
