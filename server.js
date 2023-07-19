@@ -9,7 +9,9 @@ app.get('/', (req, res)=>{
 
 app.get('/drinks', (req, res)=>{
     // res.send(drinks)
-    res.render('drinks_index.ejs')
+    res.render('drinks_index.ejs', {
+        drinks: drinks
+    })
 })
 
 app.listen(port, ()=>{
