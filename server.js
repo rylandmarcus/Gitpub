@@ -5,7 +5,7 @@ const drinks = require('./models/drinks.js')
 const food = require('./models/food.js')
 
 app.get('/', (req, res)=>{
-    res.send('Welcome to the Gitpub App!')
+    res.render('home_index.ejs')
 })
 
 //INDEX
@@ -33,6 +33,7 @@ app.get('/food/:id', (req, res)=>{
         meal: food[req.params.id]
     })
 })
+
 
 app.listen(port, ()=>{
     console.log('this is working on port', port);
