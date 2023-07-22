@@ -8,15 +8,10 @@
 </head>
 <body>
     <h1>At foo bar</h1>
-    <% let formattedDrinkArray = []%>
-            <% drink.name.split(' ').forEach(word=>{ 
-                newWord = word.charAt(0).toUpperCase()+word.slice(1)
-                formattedDrinkArray.push(newWord)
-            }) %>
-    <h2><%=formattedDrinkArray.join(' ')%></h2>
-    <img src="<%=drink.image%>.png" alt="<%=formattedDrinkArray.join(' ')%>">
-    <h3>$<%=drink.price%></h3>
-    <a href="/drinks">Back</a>
+    <h2><%=meal.name%></h2>
+    <img src="<%=meal.image%>.png" alt="<%= meal.name %>">
+    <h3>$<%=meal.price%></h3>
+    <a href="/food">Back</a>
     <style type="text/css">
         body {
           color: blanchedalmond;
